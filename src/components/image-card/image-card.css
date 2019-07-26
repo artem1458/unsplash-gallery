@@ -1,0 +1,12 @@
+.image-card {
+  margin: 30px 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.image-card img {
+  object-fit: scale-down;
+  margin: 0 auto;
+  height: 100%;
+}
