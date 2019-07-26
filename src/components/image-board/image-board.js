@@ -5,13 +5,14 @@ import ImageCard from '../image-card';
 
 import './image-board.css';
 import UnsplashService from '../../services/unsplash-service';
+import DummyUnsplashService from '../../services/dummy-unsplash-service';
 import * as actions from '../../redux/actions';
 
 class ImageBoard extends Component {
-  unsplash = new UnsplashService();
+  unsplash = new DummyUnsplashService();
 
   componentDidMount() {
-    this.updatePhotos(6);
+    this.updatePhotos();
   }
 
   updatePhotos = async (count = 6) => {
@@ -33,7 +34,11 @@ class ImageBoard extends Component {
     return (
       <div className="jumbotron image-board ">
         {imageItems}
-        <button type="button" onClick={this.updatePhotos}>
+        <button
+          type="button"
+          onClick={() => {
+            this.updatePhotos();
+          }}>
           Тест
         </button>
       </div>

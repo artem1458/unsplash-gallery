@@ -1,5 +1,5 @@
 const reducer = (state = [], action) => {
-  const newArr = [];
+  const newArr = [...state];
   switch (action.type) {
     case 'pushNewImage':
       newArr.push(...action.payload);
