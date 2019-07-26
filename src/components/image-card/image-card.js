@@ -4,6 +4,7 @@ import './image-card.css';
 
 export default class ImageCard extends Component {
   render() {
+    // console.log(this.props.imageProps);
     const {
       imageProps: { alt, urlSmall },
     } = this.props;

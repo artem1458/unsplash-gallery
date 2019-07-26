@@ -1,3 +1,1 @@
-const add = (payload) => ({ type: 'pushNewImage', payload });
-
-export { add };
+export const add = (payload) => ({ type: 'pushNewImage', payload });

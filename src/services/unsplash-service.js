@@ -20,9 +20,9 @@ export default class UnsplashService extends Unsplash {
     return await toJson(res);
   };
 
-  getRandomPhotos = async (count = 9) => {
+  getRandomPhotos = async (count) => {
     const res = await this.getResourse(this.photos.getRandomPhoto, { count });
-
+    debugger;
     return res.map((data) => {
       return this._transformData(data);
     });
