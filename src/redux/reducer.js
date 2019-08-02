@@ -1,3 +1,7 @@
+const pushNewImage = (state, action) => {
+  return [...state, ...action.payload];
+};
+
 const reducer = (state = [], action) => {
   switch (action.type) {
     case 'pushNewImage':
@@ -5,10 +9,6 @@ const reducer = (state = [], action) => {
     default:
       return state;
   }
-};
-
-const pushNewImage = (state, action) => {
-  return [...state, ...action.payload];
 };
 
 export default reducer;
