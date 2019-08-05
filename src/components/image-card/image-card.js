@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import './image-card.css';
 
-export default class ImageCard extends Component {
-  render() {
-    // console.log(this.props.imageProps);
-    const {
-      imageProps: { alt, urlSmall },
-    } = this.props;
+const ImageCard = (props) => {
+  const {
+    imageProps: { alt, urlSmall },
+  } = props;
 
-    return (
-      <div className="image-card">
-        <img className="img-thumbnail rounded" src={urlSmall} alt={alt} />
-      </div>
-    );
-  }
-}
+  const imageCardClassName =
+    'image-card col-lg-4 col-md-6 col-sm-12 my-2 d-flex justify-content-center';
+
+  return (
+    <div className={imageCardClassName}>
+      <img className="img-thumbnail rounded" src={urlSmall} alt={alt} />
+    </div>
+  );
+};
+
+export default ImageCard;

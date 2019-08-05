@@ -24,9 +24,14 @@ export default class DummyUnsplashService {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(result);
-      }, 300);
+      }, 10000);
     });
   };
 
-  searchPhotos = () => this.getRandomPhotos();
+  searchPhotos = async () => {
+    return {
+      imageList: await this.getRandomPhotos(),
+      totalPages: 10,
+    };
+  };
 }

@@ -1,39 +1,52 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../redux/actions';
 
-class ImageSearch extends Component {
-  onSearchSubmit = (e) => {
+const ImageSearch = (props) => {
+  const onSearchSubmit = (e) => {
     e.preventDefault();
-    if (this.props.inputValue.length > 1) {
-      this.props.onSearchSubmit(this.props.inputValue);
+    const {
+      currentInputValue,
+      searchSubmit,
+      searchKey,
+      currentSearchPage,
+      imagesToLoad,
+    } = props;
+
+    if (currentInputValue.length > 1 && currentInputValue !== searchKey) {
+      searchSubmit([currentInputValue, currentSearchPage, imagesToLoad]);
     }
   };
 
-  render() {
-    return (
-      <form className="jumbotron row">
+  return (
+    <form className="jumbotron container p-4">
+      <div className="row">
         <input
           type="search"
-          className="form-control col-10"
+          className="form-control col-md-10 col-sm-12"
           placeholder="Type to Search"
           onChange={(e) => {
-            this.props.onInputChange(e.target.value);
+            props.onInputChange(e.target.value);
           }}
-          value={this.props.inputValue}
+          value={props.currentInputValue}
         />
         <input
           type="submit"
-          className="btn btn-primary col-2"
+          className="btn btn-success col-md-2 col-sm-12 mt-2 mt-md-0"
           value="Search"
-          onClick={this.onSearchSubmit}
+          onClick={onSearchSubmit}
         />
-      </form>
-    );
-  }
-}
+      </div>
+    </form>
+  );
+};
 
-const mapStateToProps = (state) => ({ inputValue: state.inputValue });
+const mapStateToProps = (state) => ({
+  currentInputValue: state.currentInputValue,
+  searchKey: state.searchKey,
+  currentSearchPage: state.currentSearchPage,
+  imagesToLoad: state.imagesToLoad,
+});
 
 export default connect(
   mapStateToProps,
