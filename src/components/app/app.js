@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SearchPannel from '../search-pannel';
+import ImageSearch from '../image-search';
 
 import './app.css';
 import ImageBoard from '../image-board/image-board';
@@ -8,7 +8,7 @@ import ImageBoard from '../image-board/image-board';
 const App = () => {
   return (
     <div className="app">
-      <SearchPannel />
+      <ImageSearch />
       <ImageBoard />
     </div>
   );

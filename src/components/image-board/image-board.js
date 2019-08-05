@@ -4,20 +4,15 @@ import { connect } from 'react-redux';
 import ImageCard from '../image-card';
 
 import './image-board.css';
-import UnsplashService from '../../services/unsplash-service';
-import DummyUnsplashService from '../../services/dummy-unsplash-service';
 import * as actions from '../../redux/actions';
 
 class ImageBoard extends Component {
-  unsplash = new DummyUnsplashService();
-
   componentDidMount() {
-    this.updatePhotos();
+    this.updatePhotos(6);
   }
 
-  updatePhotos = async (count = 6) => {
-    const imageList = await this.unsplash.getRandomPhotos(count);
-    this.props.add(imageList);
+  updatePhotos = async (count) => {
+    this.props.getRandomPhotos(count);
   };
 
   render() {
@@ -27,17 +22,17 @@ class ImageBoard extends Component {
       return <div className="jumbotron image-board " />;
     }
 
-    const imageItems = imageList.map((item) => {
+    const images = imageList.map((item) => {
       return <ImageCard imageProps={item} key={item.id} />;
     });
 
     return (
       <div className="jumbotron image-board ">
-        {imageItems}
+        {images}
         <button
           type="button"
           onClick={() => {
-            this.updatePhotos();
+            this.updatePhotos(6);
           }}>
           Тест
         </button>
@@ -46,7 +41,7 @@ class ImageBoard extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({ imageList: state });
+const mapStateToProps = (state) => ({ imageList: state.imageList });
 
 export default connect(
   mapStateToProps,

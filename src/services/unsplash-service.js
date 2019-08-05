@@ -17,12 +17,22 @@ export default class UnsplashService extends Unsplash {
       throw new Error(`Could not fetch, received ${res.status}`);
     }
 
-    return await toJson(res);
+    return toJson(res);
   };
 
   getRandomPhotos = async (count) => {
     const res = await this.getResourse(this.photos.getRandomPhoto, { count });
     return res.map((data) => {
+      return this._transformData(data);
+    });
+  };
+
+  searchPhotos = async (keyword) => {
+    const response = await this.getResourse(this.search.photos, keyword, 1, 6);
+    console.log(response);
+    const results = await response.results;
+
+    return results.map((data) => {
       return this._transformData(data);
     });
   };

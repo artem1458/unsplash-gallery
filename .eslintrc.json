@@ -33,6 +33,7 @@
     "react/sort-comp": "off",
     "arrow-parens": "off",
     "class-methods-use-this": "off",
-    "no-underscore-dangle": "off"
+    "no-underscore-dangle": "off",
+    "import/prefer-default-export": "off"
   }
 }

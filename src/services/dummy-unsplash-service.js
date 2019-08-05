@@ -1,7 +1,7 @@
 export default class DummyUnsplashService {
   itemId = 0;
 
-  getRandomPhotos = (count) => {
+  getRandomPhotos = (count = 9) => {
     const result = [];
 
     for (let i = 0; i < count; i++) {
@@ -12,15 +12,21 @@ export default class DummyUnsplashService {
         color: '#EEE',
         id: this.itemId,
         urlThumb:
-          'http://www.mediacy.com/images/home/Image-Pro_Icon_256x256.png',
+          'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
         urlDownload:
-          'http://www.mediacy.com/images/home/Image-Pro_Icon_256x256.png',
+          'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
         urlSmall:
-          'http://www.mediacy.com/images/home/Image-Pro_Icon_256x256.png',
+          'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
         userName: 'Test-UserName',
       });
     }
 
-    return result;
+    return new Promise((resolve) => {
+      setTimeout(() => {
+        resolve(result);
+      }, 300);
+    });
   };
+
+  searchPhotos = () => this.getRandomPhotos();
 }
