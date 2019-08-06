@@ -25,7 +25,6 @@ class ImageBoard extends Component {
       this.props.getRandomPhotos(imagesToLoad);
     }
   };
-
   render() {
     const { imageList, hasError } = this.props;
 

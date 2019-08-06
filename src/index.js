@@ -9,10 +9,12 @@ import App from './components/app';
 
 import reducer from './redux/reducer';
 
-export const store = createStore(
-  reducer,
-  composeWithDevTools(applyMiddleware(thunk)),
-);
+// export const store = createStore(
+//   reducer,
+//   composeWithDevTools(applyMiddleware(thunk)),
+// );
+
+export const store = createStore(reducer, applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>
