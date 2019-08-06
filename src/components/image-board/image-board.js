@@ -27,7 +27,13 @@ class ImageBoard extends Component {
   };
 
   render() {
-    const { imageList } = this.props;
+    const { imageList, hasError } = this.props;
+
+    const errorNode = (
+      <h2 className="text-secondary text-center">
+        Here is an Error, try to reload page, or make another search querry.
+      </h2>
+    );
 
     const spinner = (
       <div className="d-flex justify-content-center py-3">
@@ -58,16 +64,15 @@ class ImageBoard extends Component {
 
     return (
       <InfiniteScroll
-        className="d-flex flex-column jumbotron container py-3"
-        dataLength={imageList}
-        next={() => {
-          this.requestPhotos();
-        }}
-        loader={spinner}
+        className="d-flex flex-column justify-content-center jumbotron container py-3"
+        dataLength={imageList.length}
+        next={this.requestPhotos}
+        loader={hasError ? null : spinner}
         hasMore={this.props.hasMoreImage}
         endMessage={endMessage}>
         <div className="row align-items-center justify-content-center image-board">
           {images}
+          {hasError ? errorNode : null}
         </div>
       </InfiniteScroll>
     );
@@ -78,9 +83,10 @@ const mapStateToProps = (state) => ({
   imageList: state.imageList,
   searchKey: state.searchKey,
   currentSearchPage: state.currentSearchPage,
-  totalPages: state.totalPages,
   imagesToLoad: state.imagesToLoad,
   hasMoreImage: state.hasMoreImage,
+  hasError: state.hasError,
+  errorMessage: state.errorMessage,
 });
 
 export default connect(

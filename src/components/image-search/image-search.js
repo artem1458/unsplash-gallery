@@ -5,16 +5,10 @@ import * as actions from '../../redux/actions';
 const ImageSearch = (props) => {
   const onSearchSubmit = (e) => {
     e.preventDefault();
-    const {
-      currentInputValue,
-      searchSubmit,
-      searchKey,
-      currentSearchPage,
-      imagesToLoad,
-    } = props;
+    const { currentInputValue, searchSubmit, searchKey, imagesToLoad } = props;
 
     if (currentInputValue.length > 1 && currentInputValue !== searchKey) {
-      searchSubmit([currentInputValue, currentSearchPage, imagesToLoad]);
+      searchSubmit([currentInputValue, 1, imagesToLoad]);
     }
   };
 
@@ -24,7 +18,7 @@ const ImageSearch = (props) => {
         <input
           type="search"
           className="form-control col-md-10 col-sm-12"
-          placeholder="Type to Search"
+          placeholder="Type and Search"
           onChange={(e) => {
             props.onInputChange(e.target.value);
           }}
@@ -44,7 +38,6 @@ const ImageSearch = (props) => {
 const mapStateToProps = (state) => ({
   currentInputValue: state.currentInputValue,
   searchKey: state.searchKey,
-  currentSearchPage: state.currentSearchPage,
   imagesToLoad: state.imagesToLoad,
 });
 

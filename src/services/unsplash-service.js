@@ -35,12 +35,11 @@ export default class UnsplashService extends Unsplash {
 
   searchPhotos = async (...args) => {
     const response = await this.getResourse(this.search.photos, ...args);
-    const totalPages = response.total_pages;
     const imageList = response.results.map((data) => {
       return this._transformData(data);
     });
 
-    return { imageList, totalPages };
+    return imageList;
   };
 
   _transformData = (data) => {

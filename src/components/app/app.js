@@ -1,9 +1,9 @@
 import React from 'react';
 
 import ImageSearch from '../image-search';
+import ImageBoard from '../image-board/image-board';
 
 import './app.css';
-import ImageBoard from '../image-board/image-board';
 
 const App = () => {
   return (
