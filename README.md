@@ -11,5 +11,5 @@
 <ol>
   <li>Clone this repository to your local machine</li>
   <li>Install dependencies: <code>npm install</code></li>
-  <li>Start the application <code>npm start</code> The magic happens on port :3000</li>
+  <li>Start the application <code>npm start</code> The magic happens on localhost:3000</li>
 </ol>
