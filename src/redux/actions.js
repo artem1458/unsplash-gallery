@@ -1,6 +1,5 @@
 import UnsplashService from '../services/unsplash-service';
 import DummyUnsplashService from '../services/dummy-unsplash-service';
-import imageSearch from '../components/image-search/image-search';
 
 const unsplash = new UnsplashService();
 
