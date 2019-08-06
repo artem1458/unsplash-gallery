@@ -42,6 +42,10 @@ export default class UnsplashService extends Unsplash {
     return imageList;
   };
 
+  downloadPhoto = async (image) => {
+    this.photos.downloadPhoto(image);
+  }; //для скачивания, должен быть полный объект фото
+
   _transformData = (data) => {
     return {
       alt: data.alt_description,

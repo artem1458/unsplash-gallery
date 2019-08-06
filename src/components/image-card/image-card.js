@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import './image-card.css';
+import ImageCardHover from '../image-card-hover';
 
 const ImageCard = (props) => {
   const {
-    imageProps: { alt, urlSmall },
+    imageProps: { alt, urlSmall, color, description, urlDownload, userName },
   } = props;
 
   const imageCardClassName =
@@ -13,6 +14,12 @@ const ImageCard = (props) => {
   return (
     <div className={imageCardClassName}>
       <img className="img-thumbnail rounded" src={urlSmall} alt={alt} />
+      <ImageCardHover
+        color={color}
+        description={description}
+        urlDownload={urlDownload}
+        userName={userName}
+      />
     </div>
   );
 };

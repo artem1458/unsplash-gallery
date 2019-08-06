@@ -24,7 +24,7 @@ export default class DummyUnsplashService {
     return new Promise((resolve) => {
       setTimeout(() => {
         resolve(result);
-      }, 10000);
+      }, 100);
     });
   };
 

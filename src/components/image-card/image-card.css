@@ -1,7 +1,9 @@
 .image-card {
-  max-height: 200px;
   overflow: hidden;
+  position: relative;
 }
 .image-card img {
+  max-height: 200px;
+
   object-fit: cover;
 }

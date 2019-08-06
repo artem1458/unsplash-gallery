@@ -1,0 +1,14 @@
+.image-card-hover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0.3, 0.3, 0.3, 0.4);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.image-card-hover:hover {
+  opacity: 1;
+}
