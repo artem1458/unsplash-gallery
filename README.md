@@ -7,7 +7,12 @@
   <li>Redux-Thunk</li>
 </ul>
 
-<h2>How to test the app:</h2>
+<h2>Try it by yourself!</h2>
+<ul>
+  <li>You can just follow this link: <a href="https://artem1458.github.io/unsplash-gallery/">Unsplash-Gallery</li>
+</ul>
+
+<h2>If you want to run the app on your local machine, follow next steps:</h2>
 <ol>
   <li>Clone this repository to your local machine</li>
   <li>Install dependencies: <code>npm install</code></li>
