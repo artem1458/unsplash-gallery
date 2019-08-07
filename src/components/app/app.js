@@ -7,7 +7,7 @@ import './app.css';
 
 const App = () => {
   return (
-    <div className="app">
+    <div>
       <ImageSearch />
       <ImageBoard />
     </div>
