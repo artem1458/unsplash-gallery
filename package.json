@@ -2,6 +2,7 @@
   "name": "unsplash-gallery",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://artem1458.github.io/unsplash-gallery/",
   "dependencies": {
     "gh-pages": "^2.1.0",
     "react": "^16.8.6",
@@ -43,6 +44,5 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.14.3"
-  },
-  "homepage": "https://artem1458.github.io/unsplash-gallery/"
+  }
 }
