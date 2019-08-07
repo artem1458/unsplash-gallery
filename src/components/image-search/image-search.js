@@ -3,9 +3,10 @@ import { connect } from 'react-redux';
 import * as actions from '../../redux/actions';
 
 const ImageSearch = (props) => {
+  const { currentInputValue, searchSubmit, searchKey, imagesToLoad } = props;
+
   const onSearchSubmit = (e) => {
     e.preventDefault();
-    const { currentInputValue, searchSubmit, searchKey, imagesToLoad } = props;
 
     if (currentInputValue.length > 1 && currentInputValue !== searchKey) {
       searchSubmit([currentInputValue, 1, imagesToLoad]);
@@ -22,7 +23,7 @@ const ImageSearch = (props) => {
           onChange={(e) => {
             props.onInputChange(e.target.value);
           }}
-          value={props.currentInputValue}
+          value={currentInputValue}
         />
         <input
           type="submit"

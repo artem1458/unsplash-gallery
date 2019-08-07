@@ -15,18 +15,17 @@ class ImageBoard extends Component {
   requestPhotos = () => {
     const { searchKey, currentSearchPage, imagesToLoad } = this.props;
 
+    const { requestNextSearchPage, getRandomPhotos } = this.props;
+
     if (searchKey) {
-      this.props.requestNextSearchPage([
-        searchKey,
-        currentSearchPage + 1,
-        imagesToLoad,
-      ]);
+      requestNextSearchPage([searchKey, currentSearchPage + 1, imagesToLoad]);
     } else {
-      this.props.getRandomPhotos(imagesToLoad);
+      getRandomPhotos(imagesToLoad);
     }
   };
+
   render() {
-    const { imageList, hasError } = this.props;
+    const { imageList, hasError, hasMoreImage } = this.props;
 
     const errorNode = (
       <h2 className="text-secondary text-center">
@@ -53,7 +52,9 @@ class ImageBoard extends Component {
 
     const endMessage = (
       <div className="alert alert-info py-3 text-center" role="alert">
-        That's All Folks
+        <h5 className="m-0">
+          No more images to load, try another search querry
+        </h5>
       </div>
     );
 
@@ -67,7 +68,7 @@ class ImageBoard extends Component {
         dataLength={imageList.length}
         next={this.requestPhotos}
         loader={hasError ? null : spinner}
-        hasMore={this.props.hasMoreImage}
+        hasMore={hasMoreImage}
         endMessage={endMessage}>
         <div className="row align-items-center justify-content-center image-board">
           {images}

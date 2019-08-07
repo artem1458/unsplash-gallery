@@ -1,7 +1,7 @@
 import UnsplashService from '../services/unsplash-service';
 import DummyUnsplashService from '../services/dummy-unsplash-service';
 
-const unsplash = new DummyUnsplashService();
+const unsplash = new UnsplashService();
 
 export const onInputChange = (payload) => (dispatch) => {
   if (payload.length <= 30) {

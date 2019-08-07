@@ -4,28 +4,33 @@ import './image-card-hover.css';
 
 export default class ImageCardHover extends Component {
   render() {
-    const { color, description, urlDownload, userName } = this.props;
+    const { color, id, userName } = this.props;
 
     const author = (
-      <h5 className="col-12 text-center text-light mt-2">Author:{userName}</h5>
+      <h6 className="col-12 text-center text-light mt-1">
+        Author:
+        {userName}
+      </h6>
     );
     const averagedColor = (
-      <h5 className="col-12 text-center text-light mt-2">Color:{color}</h5>
+      <h6 className="col-12 text-center text-light mt-1">
+        Color:
+        {color}
+      </h6>
     );
 
     const downloadBtn = (
       <a
-        className="btn btn-primary"
-        href={urlDownload}
-        download="proposed_file_name"
+        className="btn btn-success col-8 my-1"
+        href={`https://unsplash.com/photos/${id}/download?force=true`}
         role="button">
         Download
       </a>
     );
 
     return (
-      <div className="image-card-hover container rounded">
-        <div className="row">
+      <div className="image-card-hover rounded d-flex align-items-end">
+        <div className="bg-info rounded d-flex flex-wrap justify-content-center w-100 h-60">
           {author}
           {averagedColor}
           {downloadBtn}
