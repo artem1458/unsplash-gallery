@@ -4,7 +4,6 @@
   "private": true,
   "homepage": "https://artem1458.github.io/unsplash-gallery/",
   "dependencies": {
-    "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-infinite-scroll-component": "^4.5.3",
@@ -43,6 +42,7 @@
     "eslint-config-airbnb": "^17.1.1",
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.14.3"
+    "eslint-plugin-react": "^7.14.3",
+    "gh-pages": "^2.1.0"
   }
 }
