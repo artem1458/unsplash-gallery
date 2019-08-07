@@ -1,4 +1,4 @@
-<h1>This is an Unsplash Gallery with infinite scroll and search images by keywors.</h1>
+<h1>This is an Unsplash Gallery with infinite scroll and search images by keywords.</h1>
 
 <h2>Used technologies:</h2>
 <ul>
