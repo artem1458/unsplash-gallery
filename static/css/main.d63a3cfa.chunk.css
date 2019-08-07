@@ -1,0 +1,2 @@
+.image-card{max-height:200px;min-height:200px;max-width:300px;overflow:hidden;position:relative}.image-card img{object-fit:cover}.image-card-hover{position:absolute;left:0;top:0;height:100%;width:100%;background-color:rgba(.3,.3,.3,.4);opacity:0;-webkit-transition:opacity .2s;transition:opacity .2s}.image-card-hover:hover{opacity:1}.app{padding:0 10%;margin:30px auto}
+/*# sourceMappingURL=main.d63a3cfa.chunk.css.map */
