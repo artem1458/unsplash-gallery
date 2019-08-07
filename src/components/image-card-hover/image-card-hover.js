@@ -7,16 +7,10 @@ export default class ImageCardHover extends Component {
     const { color, id, userName } = this.props;
 
     const author = (
-      <h6 className="col-12 text-center text-light mt-1">
-        Author:
-        {userName}
-      </h6>
+      <h6 className="col-12 text-center text-light mt-1">Author: {userName}</h6>
     );
     const averagedColor = (
-      <h6 className="col-12 text-center text-light mt-1">
-        Color:
-        {color}
-      </h6>
+      <h6 className="col-12 text-center text-light mt-1">Color: {color}</h6>
     );
 
     const downloadBtn = (
