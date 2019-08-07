@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/unsplash-gallery/static/css/main.d63a3cfa.chunk.css",
-    "main.js": "/unsplash-gallery/static/js/main.b49a7ab6.chunk.js",
-    "main.js.map": "/unsplash-gallery/static/js/main.b49a7ab6.chunk.js.map",
+    "main.js": "/unsplash-gallery/static/js/main.0ca8a8a8.chunk.js",
+    "main.js.map": "/unsplash-gallery/static/js/main.0ca8a8a8.chunk.js.map",
     "runtime~main.js": "/unsplash-gallery/static/js/runtime~main.abf401f0.js",
     "runtime~main.js.map": "/unsplash-gallery/static/js/runtime~main.abf401f0.js.map",
     "static/js/2.3051047a.chunk.js": "/unsplash-gallery/static/js/2.3051047a.chunk.js",
     "static/js/2.3051047a.chunk.js.map": "/unsplash-gallery/static/js/2.3051047a.chunk.js.map",
     "index.html": "/unsplash-gallery/index.html",
-    "precache-manifest.bf9f08edf38d345dbe20b89be29f0fdb.js": "/unsplash-gallery/precache-manifest.bf9f08edf38d345dbe20b89be29f0fdb.js",
+    "precache-manifest.da80beae21951836f06da7ee299b4650.js": "/unsplash-gallery/precache-manifest.da80beae21951836f06da7ee299b4650.js",
     "service-worker.js": "/unsplash-gallery/service-worker.js",
     "static/css/main.d63a3cfa.chunk.css.map": "/unsplash-gallery/static/css/main.d63a3cfa.chunk.css.map"
   }
