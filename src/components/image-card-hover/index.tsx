@@ -1,11 +1,7 @@
 import * as React from 'react';
 import './image-card-hover.css';
 
-interface IProps {
-    color: string,
-    id: number,
-    userName: string
-}
+import IProps from './types';
 
 export default class ImageCardHover extends React.Component<IProps> {
     render() {

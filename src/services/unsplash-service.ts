@@ -1,25 +1,7 @@
 import Unsplash, {toJson} from 'unsplash-js';
 
-import IImageItem from "@/components/types/image-item";
-
-interface IImageItemUntransformed {
-    alt_description: string,
-    color: string,
-    id: number,
-    urls: {
-        small: string
-    },
-    user: {
-        username: string
-    }
-}
-
-interface ISearchSubmitArgTuple extends Array<number | string> {
-    0: string,
-    1: number,
-    2: number,
-    length: 3
-}
+import IImageItem from "@/types/image-item";
+import * as types from './types';
 
 export default class UnsplashService extends Unsplash{
     constructor() {
@@ -44,7 +26,7 @@ export default class UnsplashService extends Unsplash{
         });
     };
 
-    searchPhotos = async (...args:ISearchSubmitArgTuple):Promise<IImageItem[]> => {
+    searchPhotos = async (...args:types.ISearchSubmitArgTuple):Promise<IImageItem[]> => {
         const response = await this.getResource(this.search.photos, ...args);
         const imageList = response.results.map((data) => {
             return this.transformData(data);
@@ -63,7 +45,7 @@ export default class UnsplashService extends Unsplash{
         return toJson(res);
     };
 
-    private transformData(data: IImageItemUntransformed): IImageItem {
+    private transformData(data: types.IImageItemUntransformed): IImageItem {
         return {
             alt: data.alt_description,
             color: data.color,

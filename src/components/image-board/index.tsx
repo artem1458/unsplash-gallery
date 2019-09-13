@@ -6,30 +6,12 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import ImageCard from '../image-card';
 import Spinner from '../spinner';
 
-import IImageItem from "@/components/types/image-item";
-
 import './image-board.css';
 import * as actions from '../../redux/actions';
 
-interface IRequestNextSearchPageArgTuple extends Array<number | string> {
-    0: string;
-    1: number;
-    2: number;
-    length: 3;
-}
+import * as types from './types';
 
-interface IProps {
-    searchKey: string,
-    currentSearchPage: number,
-    imagesToLoad: number,
-    requestNextSearchPage: (IRequestNextSearchPageArgTuple)=> null,
-    getRandomPhotos: (arg0: number) => void,
-    imageList: IImageItem[],
-    hasError: boolean,
-    hasMoreImage: boolean
-}
-
-class ImageBoard extends React.Component<IProps> {
+class ImageBoard extends React.Component<types.IProps> {
     componentDidMount() {
         this.requestPhotos();
     }

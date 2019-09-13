@@ -3,7 +3,7 @@ import * as React from 'react';
 import './image-card.css';
 import ImageCardHover from '../image-card-hover';
 
-import IImageItem from "@/components/types/image-item";
+import IImageItem from "@/types/image-item";
 
 
 const ImageCard = (props: {
