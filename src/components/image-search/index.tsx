@@ -2,9 +2,24 @@ import * as React from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../../redux/actions';
 
+interface ISearchSubmitArgTuple extends Array<number | string>  {
+    0: string,
+    1: number,
+    2: number,
+    length: 3
+}
 
-const ImageSearch = (props) => {
-    const {currentInputValue, searchSubmit, searchKey, imagesToLoad} = props;
+interface IProps {
+    currentInputValue: string,
+    searchSubmit: (arg0: ISearchSubmitArgTuple) => void,
+    searchKey: string,
+    imagesToLoad: number,
+    inputChange: (arg0: string) => void
+}
+
+
+const ImageSearch = (props: IProps) => {
+    const {currentInputValue, searchSubmit, searchKey, imagesToLoad, inputChange} = props;
 
     const onSearchSubmit = (e) => {
         e.preventDefault();
@@ -14,7 +29,7 @@ const ImageSearch = (props) => {
         }
     };
 
-    const onInputChange = (e) => props.onInputChange(e.target.value);
+    const onInputChange = (e) => inputChange(e.target.value);
 
 
     return (

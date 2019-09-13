@@ -3,17 +3,12 @@ import * as React from 'react';
 import './image-card.css';
 import ImageCardHover from '../image-card-hover';
 
-interface IProps {
-    imageProps: {
-        alt: string,
-        urlSmall: string,
-        color: string,
-        userName: string,
-        id: string
-    }
-}
+import IImageItem from "@/components/types/image-item";
 
-const ImageCard = (props: IProps) => {
+
+const ImageCard = (props: {
+    imageProps: IImageItem,
+}) => {
     const {
         imageProps: {alt, urlSmall, color, userName, id},
     } = props;

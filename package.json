@@ -5,6 +5,7 @@
   "homepage": "https://artem1458.github.io/unsplash-gallery",
   "dependencies": {
     "@types/jsdom": "^12.2.4",
+    "@types/node": "12.7.5",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
     "@types/unsplash-js": "^5.0.0",
@@ -24,6 +25,7 @@
     "html-webpack-plugin": "2.29.0",
     "jest": "20.0.4",
     "jest-cli": "^24.9.0",
+    "jsdom": "^15.1.1",
     "object-assign": "4.1.1",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.8",

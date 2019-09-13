@@ -1,7 +1,27 @@
 import Unsplash, {toJson} from 'unsplash-js';
 
+import IImageItem from "@/components/types/image-item";
 
-export default class UnsplashService extends Unsplash {
+interface IImageItemUntransformed {
+    alt_description: string,
+    color: string,
+    id: number,
+    urls: {
+        small: string
+    },
+    user: {
+        username: string
+    }
+}
+
+interface ISearchSubmitArgTuple extends Array<number | string> {
+    0: string,
+    1: number,
+    2: number,
+    length: 3
+}
+
+export default class UnsplashService extends Unsplash{
     constructor() {
         super({
             applicationId:
@@ -17,7 +37,23 @@ export default class UnsplashService extends Unsplash {
         // });
     }
 
-    getResourse = async (method, ...args) => {
+    getRandomPhotos = async (count: number):Promise<IImageItem[]> => {
+        const res = await this.getResource(this.photos.getRandomPhoto, {count});
+        return res.map((data) => {
+            return this.transformData(data);
+        });
+    };
+
+    searchPhotos = async (...args:ISearchSubmitArgTuple):Promise<IImageItem[]> => {
+        const response = await this.getResource(this.search.photos, ...args);
+        const imageList = response.results.map((data) => {
+            return this.transformData(data);
+        });
+
+        return imageList;
+    };
+
+    private getResource = async (method, ...args) => {
         const res = await method(...args);
 
         if (!res.ok) {
@@ -27,23 +63,7 @@ export default class UnsplashService extends Unsplash {
         return toJson(res);
     };
 
-    getRandomPhotos = async (count) => {
-        const res = await this.getResourse(this.photos.getRandomPhoto, {count});
-        return res.map((data) => {
-            return this.transformData(data);
-        });
-    };
-
-    searchPhotos = async (...args) => {
-        const response = await this.getResourse(this.search.photos, ...args);
-        const imageList = response.results.map((data) => {
-            return this.transformData(data);
-        });
-
-        return imageList;
-    };
-
-    transformData = (data) => {
+    private transformData(data: IImageItemUntransformed): IImageItem {
         return {
             alt: data.alt_description,
             color: data.color,
@@ -51,5 +71,5 @@ export default class UnsplashService extends Unsplash {
             urlSmall: data.urls.small,
             userName: data.user.username,
         };
-    };
+    }
 }

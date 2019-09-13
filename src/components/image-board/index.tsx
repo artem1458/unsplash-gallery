@@ -6,22 +6,16 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 import ImageCard from '../image-card';
 import Spinner from '../spinner';
 
+import IImageItem from "@/components/types/image-item";
+
 import './image-board.css';
 import * as actions from '../../redux/actions';
-
-interface IImageItem {
-    alt: string,
-    urlSmall: string,
-    color: string,
-    userName: string,
-    id: string
-}
 
 interface IRequestNextSearchPageArgTuple extends Array<number | string> {
     0: string;
     1: number;
     2: number;
-    length: 3; // это литеральный тип '2', это не значение!
+    length: 3;
 }
 
 interface IProps {

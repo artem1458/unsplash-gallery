@@ -3,7 +3,7 @@ import './image-card-hover.css';
 
 interface IProps {
     color: string,
-    id: string,
+    id: number,
     userName: string
 }
 

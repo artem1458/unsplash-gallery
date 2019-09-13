@@ -2,11 +2,11 @@ import UnsplashService from '../services/unsplash-service';
 
 const unsplash = new UnsplashService();
 
-export const onInputChange = (payload) => (dispatch) => {
+export const inputChange = (payload) => (dispatch) => {
     if (payload.length <= 30) {
         dispatch({type: 'CHANGE_INPUT', payload});
     }
-    return null;
+    
 };
 
 export const getRandomPhotos = (count) => async (dispatch) => {
@@ -19,7 +19,7 @@ export const getRandomPhotos = (count) => async (dispatch) => {
             dispatch({type: 'SET_HAS_ERROR_TRUE'});
             dispatch({type: 'SET_ERROR_MESSAGE', payload: e});
         });
-    return null;
+    
 };
 
 export const searchSubmit = (payload) => async (dispatch) => {
@@ -50,7 +50,7 @@ export const searchSubmit = (payload) => async (dispatch) => {
             dispatch({type: 'SET_HAS_ERROR_TRUE'});
             dispatch({type: 'SET_ERROR_MESSAGE', payload: e});
         });
-    return null;
+    
 };
 
 export const requestNextSearchPage = (payload) => async (dispatch) => {
@@ -68,5 +68,5 @@ export const requestNextSearchPage = (payload) => async (dispatch) => {
             dispatch({type: 'SET_HAS_ERROR_TRUE'});
             dispatch({type: 'SET_ERROR_MESSAGE', payload: e});
         });
-    return null;
+    
 };
