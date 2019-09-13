@@ -1,12 +1,11 @@
 import * as React from 'react';
 import { mount } from 'enzyme';
 
-import ImageCard from 'components/image-card';
+import ImageCard from '../../../../src/components/image-card';
 
 
 describe('src/components/image-card', () => {
     it('src/components/image-card', () => {
-        //Given
         const expectedClass = 'image-card col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center p-0 m-2';
         const props = {
             imageProps: {
@@ -18,10 +17,8 @@ describe('src/components/image-card', () => {
             },
         };
 
-        //When
         const wrapper = mount(<ImageCard {...props} />);
 
-        //Then
         expect(wrapper.find(`.${expectedClass}`)).toHaveLength(1);
     });
 });

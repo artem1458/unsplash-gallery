@@ -9,12 +9,12 @@ import Spinner from '../spinner';
 import './image-board.css';
 import * as actions from '../../redux/actions';
 
-interface ImageItem {
+interface IImageItem {
     alt: string,
-    color: string,
-    id: number,
     urlSmall: string,
+    color: string,
     userName: string,
+    id: string
 }
 
 interface IRequestNextSearchPageArgTuple extends Array<number | string> {
@@ -29,8 +29,8 @@ interface IProps {
     currentSearchPage: number,
     imagesToLoad: number,
     requestNextSearchPage: (IRequestNextSearchPageArgTuple)=> null,
-    getRandomPhotos: (number) => void,
-    imageList: ImageItem[],
+    getRandomPhotos: (arg0: number) => void,
+    imageList: IImageItem[],
     hasError: boolean,
     hasMoreImage: boolean
 }

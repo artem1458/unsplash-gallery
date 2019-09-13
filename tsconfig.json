@@ -19,11 +19,10 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": false,
     "paths": {
-      "*/*":["src/*"],
-      "components": ["src/components"]
+      "@/*":["src/*"],
+      "components":["src/components/*"]
     }
   },
-  "include": ["src"],
   "exclude": [
     "node_modules",
     "build",
