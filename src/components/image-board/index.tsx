@@ -19,16 +19,14 @@ class ImageBoard extends React.Component<types.IProps> {
     requestPhotos = () => {
         const {
             searchKey,
-            currentSearchPage,
-            imagesToLoad,
             requestNextSearchPage,
             getRandomPhotos,
         } = this.props;
 
         if (searchKey) {
-            requestNextSearchPage([searchKey, currentSearchPage + 1, imagesToLoad]);
+            requestNextSearchPage();
         } else {
-            getRandomPhotos(imagesToLoad);
+            getRandomPhotos();
         }
     };
 

@@ -19,8 +19,8 @@
     "suppressImplicitAnyIndexErrors": true,
     "noUnusedLocals": false,
     "paths": {
-      "@/*":["src/*"],
-      "components":["src/components/*"]
+      "@/*": ["src/*"],
+      "components": ["src/components/*"]
     }
   },
   "exclude": [

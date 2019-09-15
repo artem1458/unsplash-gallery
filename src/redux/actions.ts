@@ -6,21 +6,11 @@ export const inputChange = (payload) => (dispatch) => {
     if (payload.length <= 30) {
         dispatch({type: 'CHANGE_INPUT', payload});
     }
-    
 };
 
-export const getRandomPhotos = (count) => async (dispatch) => {
-    unsplash
-        .getRandomPhotos(count)
-        .then((imageList) => {
-            dispatch({type: 'PUSH_NEW_IMAGE', payload: imageList});
-        })
-        .catch((e) => {
-            dispatch({type: 'SET_HAS_ERROR_TRUE'});
-            dispatch({type: 'SET_ERROR_MESSAGE', payload: e});
-        });
-    
-};
+export const getRandomPhotos = () => ({type: 'USER_RANDOM_PHOTOS_FETCH_REQUEST'});
+
+export const requestNextSearchPage = () => ({type: 'USER_REQUEST_FETCH_NEXT_SEARCH_PAGE'});
 
 export const searchSubmit = (payload) => async (dispatch) => {
     const imagesToLoad = payload[2];
@@ -53,20 +43,4 @@ export const searchSubmit = (payload) => async (dispatch) => {
     
 };
 
-export const requestNextSearchPage = (payload) => async (dispatch) => {
-    unsplash
-        .searchPhotos(...payload)
-        .then((imageList) => {
-            if (imageList.length === 0) {
-                dispatch({type: 'SET_HAS_IMAGE_FALSE'});
-            } else {
-                dispatch({type: 'PUSH_NEW_IMAGE', payload: imageList});
-                dispatch({type: 'INC_CURRENT_SEARCH_PAGE'});
-            }
-        })
-        .catch((e) => {
-            dispatch({type: 'SET_HAS_ERROR_TRUE'});
-            dispatch({type: 'SET_ERROR_MESSAGE', payload: e});
-        });
-    
-};
+

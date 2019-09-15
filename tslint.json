@@ -10,7 +10,8 @@
   "rules": {
     "ordered-imports": [false],
     "object-literal-sort-keys": false,
-    "member-access": [true, "no-public"]
+    "member-access": [true, "no-public"],
+    "no-console": false
   },
   "jsRules": {
     "object-literal-sort-keys": false
