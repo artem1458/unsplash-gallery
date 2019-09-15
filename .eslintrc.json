@@ -19,7 +19,6 @@
   },
   "plugins": ["react"],
   "rules": {
-    "indent": ["error", 4],
     "linebreak-style": "off",
     "react/prefer-stateless-function": "off",
     "react/jsx-filename-extension": "off",
@@ -35,8 +34,6 @@
     "arrow-parens": "off",
     "class-methods-use-this": "off",
     "no-underscore-dangle": "off",
-    "import/prefer-default-export": "off",
-    "react/jsx-indent": "off",
-    "import/no-unresolved": "off"
+    "import/prefer-default-export": "off"
   }
 }
