@@ -48,14 +48,14 @@ export function* userSearchSubmit(action: IAction) {
             yield put({type: 'SET_HAS_ERROR_FALSE'});
             yield put({type: 'SET_HAS_IMAGE_FALSE'});
             yield put({type: 'RESET_CURRENT_SEARCH_PAGE'});
-            yield put({type: 'SET_SEARCH_KEY'});
+            yield put({type: 'SET_SEARCH_KEY', payload: action.payload});
             yield put({type: 'CLEAR_IMAGE_LIST'});
             yield put({type: 'PUSH_NEW_IMAGE', payload: imageList});
         } else {
             yield put({type: 'SET_HAS_ERROR_FALSE'});
             yield put({type: 'SET_HAS_IMAGE_TRUE'});
             yield put({type: 'RESET_CURRENT_SEARCH_PAGE'});
-            yield put({type: 'SET_SEARCH_KEY'});
+            yield put({type: 'SET_SEARCH_KEY', payload: action.payload});
             yield put({type: 'CLEAR_IMAGE_LIST'});
             yield put({type: 'PUSH_NEW_IMAGE', payload: imageList});
         }

@@ -13,7 +13,7 @@ describe('src/components/image-card', () => {
         },
     };
 
-    it('src/components/image-card', () => {
+    it('should contain className', () => {
         //Given
         const expectedClass = '.img-thumbnail.rounded';
 
@@ -24,7 +24,7 @@ describe('src/components/image-card', () => {
         expect(wrapper.find(expectedClass)).toHaveLength(1);
     });
 
-    it('src/components/image-card', () => {
+    it('should contain className', () => {
         //Given
         const expectedClass = '.image-card.col-lg-4.col-md-6.col-sm-12.d-flex.justify-content-center.p-0.m-2';
 
@@ -35,7 +35,7 @@ describe('src/components/image-card', () => {
         expect(wrapper.find(expectedClass)).toHaveLength(1);
     });
 
-    it('src/components/image-card', () => {
+    it('should contain props', () => {
         //Given
         const {imageProps: {color, userName, id}} = props;
 

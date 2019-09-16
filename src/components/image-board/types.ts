@@ -1,4 +1,4 @@
-import IImageItem from "../../types/image-item";
+import IImageItem from "src/types/image-item";
 
 export interface IProps {
     requestNextSearchPage: ()=> void,

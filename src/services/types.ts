@@ -1,7 +1,7 @@
 export interface IImageItemUntransformed {
     alt_description: string,
     color: string,
-    id: number,
+    id: string,
     urls: {
         small: string
     },

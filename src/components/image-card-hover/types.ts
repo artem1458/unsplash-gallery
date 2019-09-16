@@ -1,5 +1,5 @@
 export default interface IProps {
     color: string,
-    id: number,
+    id: string,
     userName: string
 }

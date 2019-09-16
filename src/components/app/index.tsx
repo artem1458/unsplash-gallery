@@ -7,10 +7,10 @@ import './app.css';
 
 const App = () => {
     return (
-        <div>
+        <React.Fragment>
             <ImageSearch/>
             <ImageBoard/>
-        </div>
+        </React.Fragment>
     );
 };
 

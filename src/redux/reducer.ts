@@ -33,7 +33,7 @@ const reducer = (state = initialState, action: IAction) => {
             return {...state, currentSearchPage: state.currentSearchPage + 1};
 
         case 'SET_SEARCH_KEY':
-            return {...state, searchKey: state.currentInputValue};
+            return {...state, searchKey: action.payload};
 
         case 'SET_HAS_IMAGE_FALSE':
             return {...state, hasMoreImage: false};

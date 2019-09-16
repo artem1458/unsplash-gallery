@@ -3,5 +3,5 @@ export default interface IImageItem {
     urlSmall: string,
     color: string,
     userName: string,
-    id: number
+    id: string
 }
