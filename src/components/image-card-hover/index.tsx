@@ -12,7 +12,7 @@ const ImageCardHover = (props: IProps) => {
             <a
                 className="font-weight-bold text-light"
                 href={`https://unsplash.com/@${userName}`}
-                target="_blank">
+                target="_blank" rel="noopener noreferrer">
                 {userName}
             </a>
         </h6>

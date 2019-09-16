@@ -20,7 +20,7 @@ describe('src/components/image-board', () => {
         errorMessage: 'error',
     };
 
-    it('should contain className', () => {
+    it('should contain image-board element', () => {
         //Given
         const expectedClass = '.image-board';
 
@@ -31,7 +31,7 @@ describe('src/components/image-board', () => {
         expect(wrapper.find(expectedClass)).toHaveLength(1);
     });
 
-    it('expect to have error node', () => {
+    it('expect to have error element', () => {
         //Given
         const expectedClass = '.error-message';
 
@@ -42,7 +42,7 @@ describe('src/components/image-board', () => {
         expect(wrapper.find(expectedClass)).toHaveLength(1)
     });
 
-    it('expect to have end-message node', () => {
+    it('expect to have end-message element', () => {
         //Given
         const expectedClass = '.end-message';
 
@@ -53,7 +53,7 @@ describe('src/components/image-board', () => {
         expect(wrapper.find(expectedClass)).toHaveLength(1)
     });
 
-    it('expect to have image-board node', () => {
+    it('expect to have image-board element', () => {
         //Given
         const expectedClass = '.image-board';
 
@@ -64,7 +64,7 @@ describe('src/components/image-board', () => {
         expect(wrapper.find(expectedClass)).toHaveLength(1)
     });
 
-    it('expect to have at least 1 image-card node', () => {
+    it('expect to have at least 1 image-card element', () => {
         //Given
         const expectedClass = '.image-card';
 

@@ -2,32 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6181039f-80af-454a-a558-e1406e59ceb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/image-board/dispatch-selector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/image-board/state-selector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/image-search/component.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/image-search/dispatch-selector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/image-search/state-selector.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/image-board/image-board.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-board/component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/image-board/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-board/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/image-board/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-board/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/image-card-hover/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-card-hover/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/image-search/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-search/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga/workers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/workers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/services/unsplash-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/unsplash-service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/image-item.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/image-item.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image-card-hover/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-card-hover/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/components/image-card-hover/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/image-card-hover/index.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/components/image-card/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/image-card/index.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +146,7 @@
       <workItem from="1568624844972" duration="1484000" />
       <workItem from="1568626332381" duration="2469000" />
       <workItem from="1568628960803" duration="34000" />
-      <workItem from="1568629030929" duration="16197000" />
+      <workItem from="1568629030929" duration="17171000" />
     </task>
     <servers />
   </component>
