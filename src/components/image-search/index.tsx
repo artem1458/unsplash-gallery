@@ -1,49 +1,57 @@
 import * as React from 'react';
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import * as actions from '../../redux/actions';
 
 import * as types from './types';
+import IState from "../../types/state";
 
+class ImageSearch extends React.Component<types.IProps> {
+    state = {
+        inputValue: '',
+    };
 
-const ImageSearch = (props: types.IProps) => {
-    const {currentInputValue, searchSubmit, searchKey, imagesToLoad, inputChange} = props;
+    onInputChange = (e: React.FormEvent<HTMLInputElement>) => {
+        this.setState({inputValue: e.currentTarget.value})
+    };
 
-    const onSearchSubmit = (e) => {
+    onSearchSubmit = (e: React.FormEvent<HTMLInputElement>) => {
         e.preventDefault();
+        
+        const {inputValue} = this.state;
 
-        if (currentInputValue.length > 1 && currentInputValue !== searchKey) {
-            searchSubmit([currentInputValue, 1, imagesToLoad]);
+        if (inputValue.length > 1 && inputValue !== this.props.searchKey) {
+            this.props.searchSubmit(inputValue);
         }
     };
 
-    const onInputChange = (e) => inputChange(e.target.value);
+    render() {
+        const {inputValue} = this.state;
 
+        return (
+            <form className="jumbotron container p-4">
+                <div className="row">
+                    <input
+                        type="search"
+                        className="form-control col-md-10 col-sm-12"
+                        placeholder="Type and Search"
+                        onChange={this.onInputChange}
+                        value={inputValue}
+                    />
+                    <input
+                        type="submit"
+                        className="btn btn-success col-md-2 col-sm-12 mt-2 mt-md-0"
+                        value="Search"
+                        onClick={this.onSearchSubmit}
+                    />
+                </div>
+            </form>
+        );
+    }
 
-    return (
-        <form className="jumbotron container p-4">
-            <div className="row">
-                <input
-                    type="search"
-                    className="form-control col-md-10 col-sm-12"
-                    placeholder="Type and Search"
-                    onChange={onInputChange}
-                    value={currentInputValue}
-                />
-                <input
-                    type="submit"
-                    className="btn btn-success col-md-2 col-sm-12 mt-2 mt-md-0"
-                    value="Search"
-                    onClick={onSearchSubmit}
-                />
-            </div>
-        </form>
-    );
-};
+}
 
-const mapStateToProps = (state) => ({
-    currentInputValue: state.currentInputValue,
+const mapStateToProps = (state: IState) => ({
     searchKey: state.searchKey,
-    imagesToLoad: state.imagesToLoad,
 });
 
 export default connect(

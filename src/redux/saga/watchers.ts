@@ -11,5 +11,5 @@ export function* watchUserRequestNextSearchPage() {
 }
 
 export function* watchUserSearchSubmit() {
-    yield takeEvery('USER_SEARCH_SUBMIT', workers.searchSubmit);
+    yield takeEvery('USER_SEARCH_SUBMIT', workers.userSearchSubmit);
 }

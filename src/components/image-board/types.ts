@@ -1,17 +1,11 @@
-import IImageItem from "@/types/image-item";
-
-export interface IRequestNextSearchPageArgTuple extends Array<number | string> {
-    0: string;
-    1: number;
-    2: number;
-    length: 3;
-}
+import IImageItem from "../../types/image-item";
 
 export interface IProps {
-    searchKey: string,
     requestNextSearchPage: ()=> void,
+    searchKey: string,
     getRandomPhotos: () => void,
     imageList: IImageItem[],
     hasError: boolean,
     hasMoreImage: boolean,
+    errorMessage: string,
 }

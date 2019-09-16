@@ -1,4 +1,7 @@
-const initialState = {
+import IState from "../types/state";
+import IAction from "../types/action";
+
+const initialState: IState = {
     imageList: [],
     currentInputValue: '',
     searchKey: '',
@@ -9,7 +12,7 @@ const initialState = {
     errorMessage: '',
 };
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action: IAction) => {
     switch (action.type) {
         case 'PUSH_NEW_IMAGE':
             return {...state, imageList: [...state.imageList, ...action.payload]};

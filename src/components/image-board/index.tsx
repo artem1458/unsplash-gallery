@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 
 import InfiniteScroll from 'react-infinite-scroll-component';
 
-import ImageCard from '../image-card';
-import Spinner from '../spinner';
+import ImageCard from 'src/components/image-card';
+import Spinner from 'src/components/spinner';
 
 import './image-board.css';
-import * as actions from '../../redux/actions';
+import * as actions from 'src/redux/actions';
 
 import * as types from './types';
+
+import IState from "src/types/state";
 
 class ImageBoard extends React.Component<types.IProps> {
     componentDidMount() {
@@ -56,7 +58,7 @@ class ImageBoard extends React.Component<types.IProps> {
                 className="d-flex flex-column justify-content-center jumbotron container py-3"
                 dataLength={imageList.length}
                 next={this.requestPhotos}
-                loader={hasError ? null : Spinner}
+                loader={hasError ? null : <Spinner/>}
                 hasMore={hasMoreImage}
                 endMessage={endMessage}>
                 <div className="row align-items-center justify-content-center image-board">
@@ -68,14 +70,12 @@ class ImageBoard extends React.Component<types.IProps> {
     }
 }
 
-const mapStateToProps = (state) => ({
+const mapStateToProps = (state: IState) => ({
     imageList: state.imageList,
-    searchKey: state.searchKey,
-    currentSearchPage: state.currentSearchPage,
-    imagesToLoad: state.imagesToLoad,
     hasMoreImage: state.hasMoreImage,
     hasError: state.hasError,
     errorMessage: state.errorMessage,
+    searchKey: state.searchKey,
 });
 
 export default connect(

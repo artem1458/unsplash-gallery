@@ -1,6 +1,6 @@
 import Unsplash, {toJson} from 'unsplash-js';
 
-import IImageItem from "@/types/image-item";
+import IImageItem from "../types/image-item";
 import * as types from './types';
 
 export default class UnsplashService extends Unsplash{
@@ -21,21 +21,19 @@ export default class UnsplashService extends Unsplash{
 
     getRandomPhotos = async (count: number):Promise<IImageItem[]> => {
         const res = await this.getResource(this.photos.getRandomPhoto, {count});
-        return res.map((data) => {
+        return res.map((data: any) => {
             return this.transformData(data);
         });
     };
 
     searchPhotos = async (...args:types.ISearchSubmitArgTuple):Promise<IImageItem[]> => {
         const response = await this.getResource(this.search.photos, ...args);
-        const imageList = response.results.map((data) => {
+        return  response.results.map((data: any) => {
             return this.transformData(data);
         });
-
-        return imageList;
     };
 
-    private getResource = async (method, ...args) => {
+    private getResource = async (method: any, ...args: any) => {
         const res = await method(...args);
 
         if (!res.ok) {
