@@ -31,7 +31,7 @@ export function* requestNextSearchPage() {
 		);
 
 		if (imageList.length === 0) {
-			yield put({ type: 'SET_HAS_IMAGE_FALSE' });
+			yield put({ type: 'SET_HAS_MORE_IMAGE_FALSE' });
 		} else {
 			yield put({ type: 'PUSH_NEW_IMAGE', payload: imageList });
 			yield put({ type: 'INC_CURRENT_SEARCH_PAGE' });
@@ -55,10 +55,10 @@ export function* userSearchSubmit(action: IAction) {
 
 		if (imageList.length === 0) {
 			yield put({ type: 'CLEAR_IMAGE_LIST' });
-			yield put({ type: 'SET_HAS_IMAGE_FALSE' });
+			yield put({ type: 'SET_HAS_MORE_IMAGE_FALSE' });
 		} else if (imageList.length < imagesToLoad) {
 			yield put({ type: 'SET_HAS_ERROR_FALSE' });
-			yield put({ type: 'SET_HAS_IMAGE_FALSE' });
+			yield put({ type: 'SET_HAS_MORE_IMAGE_FALSE' });
 			yield put({ type: 'RESET_CURRENT_SEARCH_PAGE' });
 			yield put({ type: 'SET_SEARCH_KEY', payload: action.payload });
 			yield put({ type: 'CLEAR_IMAGE_LIST' });

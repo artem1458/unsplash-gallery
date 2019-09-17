@@ -7,7 +7,8 @@ class ImageSearch extends React.Component<types.IProps> {
 	};
 
 	onInputChange = (e: React.FormEvent<HTMLInputElement>) => {
-		this.setState({ inputValue: e.currentTarget.value });
+		const inputValue = e.currentTarget.value;
+		this.setState({ inputValue });
 	};
 
 	onSearchSubmit = (e: React.FormEvent<HTMLInputElement>) => {
@@ -28,14 +29,14 @@ class ImageSearch extends React.Component<types.IProps> {
 				<div className="row">
 					<input
 						type="search"
-						className="form-control col-md-10 col-sm-12"
+						className="form-control col-md-10 col-sm-12 search-input"
 						placeholder="Type and Search"
 						onChange={this.onInputChange}
 						value={inputValue}
 					/>
 					<input
 						type="submit"
-						className="btn btn-success col-md-2 col-sm-12 mt-2 mt-md-0"
+						className="btn btn-success col-md-2 col-sm-12 mt-2 mt-md-0 search-submit"
 						value="Search"
 						onClick={this.onSearchSubmit}
 					/>

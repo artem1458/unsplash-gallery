@@ -3,11 +3,11 @@ import { mount } from 'enzyme';
 import ImageBoard from 'components/image-board/component';
 import mapStateToProps from 'components/image-board/state-selector';
 
-describe('src/components/image-board', () => {
+describe('components/image-board', () => {
 	const props = {
-		requestNextSearchPage: () => void 0,
+		requestNextSearchPage: () => {},
 		searchKey: '',
-		getRandomPhotos: () => void 0,
+		getRandomPhotos: () => {},
 		imageList: [
 			{
 				alt: 'string',

@@ -38,7 +38,7 @@ const reducer = (state = initialState, action: IAction) => {
 		case 'SET_SEARCH_KEY':
 			return { ...state, searchKey: action.payload };
 
-		case 'SET_HAS_IMAGE_FALSE':
+		case 'SET_HAS_MORE_IMAGE_FALSE':
 			return { ...state, hasMoreImage: false };
 
 		case 'SET_HAS_IMAGE_TRUE':
