@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6181039f-80af-454a-a558-e1406e59ceb0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/tests/components/image-search/index.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/image-search/component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-search/component.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/saga/workers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/workers.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/store.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +154,7 @@
       <workItem from="1568628960803" duration="34000" />
       <workItem from="1568629030929" duration="17171000" />
       <workItem from="1568700877969" duration="15249000" />
-      <workItem from="1568720118232" duration="2264000" />
+      <workItem from="1568720118232" duration="2812000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1568708071281</created>
@@ -171,7 +163,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568708071281</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="m">
+      <created>1568722601970</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568722601970</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
