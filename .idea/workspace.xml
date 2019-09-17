@@ -2,10 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6181039f-80af-454a-a558-e1406e59ceb0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/components/app/index.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/components/spinner/index.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image-board/component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-board/component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image-board/dispatch-selector.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-board/dispatch-selector.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image-board/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-board/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/image-card-hover/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-card-hover/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image-card/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-card/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/image-search/component.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/image-search/component.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/spinner/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/spinner/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/saga/watchers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/watchers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/redux/saga/workers.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/saga/workers.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/dummy-unsplash-service.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/dummy-unsplash-service.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/services/unsplash-service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/services/unsplash-service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/components/image-card-hover/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/image-card-hover/index.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/components/image-card/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/image-card/index.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +35,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Artem Kornev &lt;artemkakornev1@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1QuSUNQB3HPuHZYDWDMRgKlkJFT" />
@@ -21,13 +47,16 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs.jest.jest_package" value="$PROJECT_DIR$/node_modules/jest" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="settings.typescriptcompiler" />
+    <property name="prettierjs.PrettierConfiguration.Package" value="C:\Users\User\WebstormProjects\ownProjects\unsplash-gallery\node_modules\prettier" />
+    <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="ts.external.directory.path" value="C:\Users\User\WebstormProjects\ownProjects\unsplash-gallery\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
@@ -49,21 +78,34 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Jest.src/components/image-board">
-    <configuration name="src/components/image-board" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Jest.components/app">
+    <configuration name="components/app" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="SUITE" />
-      <test-file value="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" />
+      <test-file value="$PROJECT_DIR$/tests/components/app/index.test.tsx" />
       <test-names>
-        <test-name value="src/components/image-board" />
+        <test-name value="components/app" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="src/components/image-board.expect to have at least 1 image-card node" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="components/spinner" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/components/spinner/index.test.tsx" />
+      <test-names>
+        <test-name value="components/spinner" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="src/components/image-board.expect to have correct quantity of image-card elements" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
@@ -73,59 +115,44 @@
       <test-file value="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" />
       <test-names>
         <test-name value="src/components/image-board" />
-        <test-name value="expect to have at least 1 image-card node" />
+        <test-name value="expect to have correct quantity of image-card elements" />
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="src/components/image-board.expect to have error node" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+    <configuration name="src/components/image-card" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/tests/components/image-card-hover/index.test.tsx" />
+      <test-names>
+        <test-name value="src/components/image-card" />
+      </test-names>
+      <method v="2" />
+    </configuration>
+    <configuration name="src/components/image-card.should contain author element" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
       <jest-package value="$PROJECT_DIR$/node_modules/jest" />
       <working-dir value="$PROJECT_DIR$" />
       <envs />
       <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" />
+      <test-file value="$PROJECT_DIR$/tests/components/image-card-hover/index.test.tsx" />
       <test-names>
-        <test-name value="src/components/image-board" />
-        <test-name value="expect to have error node" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="src/components/image-board.infinite-scroll" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" />
-      <test-names>
-        <test-name value="src/components/image-board" />
-        <test-name value="infinite-scroll" />
-      </test-names>
-      <method v="2" />
-    </configuration>
-    <configuration name="src/components/image-board.should contain className" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST" />
-      <test-file value="$PROJECT_DIR$/tests/components/image-board/index.test.tsx" />
-      <test-names>
-        <test-name value="src/components/image-board" />
-        <test-name value="should contain className" />
+        <test-name value="src/components/image-card" />
+        <test-name value="should contain author element" />
       </test-names>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Jest.src/components/image-board" />
-        <item itemvalue="Jest.src/components/image-board.expect to have at least 1 image-card node" />
-        <item itemvalue="Jest.src/components/image-board.expect to have error node" />
-        <item itemvalue="Jest.src/components/image-board.infinite-scroll" />
-        <item itemvalue="Jest.src/components/image-board.should contain className" />
+        <item itemvalue="Jest.components/app" />
+        <item itemvalue="Jest.components/spinner" />
+        <item itemvalue="Jest.src/components/image-board.expect to have correct quantity of image-card elements" />
+        <item itemvalue="Jest.src/components/image-card" />
+        <item itemvalue="Jest.src/components/image-card.should contain author element" />
       </list>
     </recent_temporary>
   </component>
@@ -147,6 +174,7 @@
       <workItem from="1568626332381" duration="2469000" />
       <workItem from="1568628960803" duration="34000" />
       <workItem from="1568629030929" duration="17171000" />
+      <workItem from="1568700877969" duration="6784000" />
     </task>
     <servers />
   </component>
@@ -165,5 +193,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

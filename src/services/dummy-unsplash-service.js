@@ -1,37 +1,37 @@
 export default class DummyUnsplashService {
-  itemId = 0;
+	itemId = 0;
 
-  getRandomPhotos = (count = 9) => {
-    const result = [];
+	getRandomPhotos = (count = 9) => {
+		const result = [];
 
-    for (let i = 0; i < count; i++) {
-      this.itemId++;
-      result.push({
-        alt: 'TEST-alt',
-        description: 'Test-Description',
-        color: '#EEE',
-        id: this.itemId,
-        urlThumb:
-          'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
-        urlDownload:
-          'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
-        urlSmall:
-          'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
-        userName: 'Test-UserName',
-      });
-    }
+		for (let i = 0; i < count; i++) {
+			this.itemId++;
+			result.push({
+				alt: 'TEST-alt',
+				description: 'Test-Description',
+				color: '#EEE',
+				id: this.itemId,
+				urlThumb:
+					'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
+				urlDownload:
+					'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
+				urlSmall:
+					'https://www.arborday.org/trees/lifestages/images/figure-life-stages.jpg',
+				userName: 'Test-UserName',
+			});
+		}
 
-    return new Promise((resolve) => {
-      setTimeout(() => {
-        resolve(result);
-      }, 100);
-    });
-  };
+		return new Promise(resolve => {
+			setTimeout(() => {
+				resolve(result);
+			}, 100);
+		});
+	};
 
-  searchPhotos = async () => {
-    return {
-      imageList: await this.getRandomPhotos(),
-      totalPages: 10,
-    };
-  };
+	searchPhotos = async () => {
+		return {
+			imageList: await this.getRandomPhotos(),
+			totalPages: 10,
+		};
+	};
 }
