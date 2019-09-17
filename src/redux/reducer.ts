@@ -23,12 +23,6 @@ const reducer = (state = initialState, action: IAction) => {
 		case 'CLEAR_IMAGE_LIST':
 			return { ...state, imageList: [] };
 
-		case 'CHANGE_INPUT':
-			return {
-				...state,
-				currentInputValue: action.payload,
-			};
-
 		case 'RESET_CURRENT_SEARCH_PAGE':
 			return { ...state, currentSearchPage: 1 };
 

@@ -63,16 +63,15 @@ describe('src/components/image-card', () => {
 		${'1esASD21dDf'}
 	`('author should contain correct href', ({ userName }) => {
 		//Given
-		const reg = /^(https:\/\/unsplash\.com\/@)([\w])+$/g;
+		const correctHref = `https://unsplash.com/@${userName}`;
 
 		//When
-		const wrapper = mount(
-			<ImageCardHover {...props} userName={userName} />
-		).find('.author-link');
-		const href = wrapper.prop('href');
+		const href = mount(<ImageCardHover {...props} userName={userName} />)
+			.find('.author-link')
+			.prop('href');
 
 		//Then
-		expect(href).toMatch(reg);
+		expect(href).toEqual(correctHref);
 	});
 
 	it.each`
@@ -84,15 +83,13 @@ describe('src/components/image-card', () => {
 		${'1esASD21dDf'}
 	`('button should contain correct href', ({ id }) => {
 		//Given
-		const reg = /^(https:\/\/unsplash\.com\/photos\/)([\w])+(\/download\?force=true)$/g;
-
+		const correctHref = `https://unsplash.com/photos/${id}/download?force=true`;
 		//When
-		const wrapper = mount(<ImageCardHover {...props} id={id} />).find(
-			'.download-bnt'
-		);
-		const href = wrapper.prop('href');
+		const href = mount(<ImageCardHover {...props} id={id} />)
+			.find('.download-bnt')
+			.prop('href');
 
 		//Then
-		expect(href).toMatch(reg);
+		expect(href).toEqual(correctHref);
 	});
 });
