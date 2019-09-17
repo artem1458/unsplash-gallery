@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6181039f-80af-454a-a558-e1406e59ceb0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/redux/reducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/redux/reducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/components/image-card-hover/index.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/tests/components/image-card-hover/index.test.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -154,7 +152,7 @@
       <workItem from="1568628960803" duration="34000" />
       <workItem from="1568629030929" duration="17171000" />
       <workItem from="1568700877969" duration="15249000" />
-      <workItem from="1568720118232" duration="9203000" />
+      <workItem from="1568720118232" duration="10014000" />
     </task>
     <task id="LOCAL-00001" summary="m">
       <created>1568708071281</created>
@@ -177,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568722948730</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="m">
+      <created>1568730554772</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568730554772</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
